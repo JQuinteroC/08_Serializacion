@@ -2,13 +2,14 @@ package MAIN;
 
 import GUI.FRM_Notas;
 import LOGIC.ControladorNotas;
+import java.io.IOException;
 
 /**
  * @author <a href="https://github.com/JQuinteroC">JQuinteroC</a>
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FRM_Notas vv = new FRM_Notas();
         ControladorNotas u = new ControladorNotas(vv);
 

@@ -19,7 +19,6 @@ import javax.swing.JLabel;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
-import javax.swing.border.Border;
 
 /**
  *
@@ -135,9 +134,7 @@ public class FRM_Estudiante extends JFrame {
             while (it.hasNext()) {
                 e = (Estudiante) it.next();
             }
-        } catch (ClassNotFoundException ex) {
-
-        } catch (IOException ex) {
+        } catch (ClassNotFoundException | IOException ex) {
 
         }
 
@@ -174,5 +171,6 @@ public class FRM_Estudiante extends JFrame {
     public void asignaOyentes(ControladorEstudiantes c) {
         btnAceptar.addActionListener(c);
         btnCancelar.addActionListener(c);
+        txtCodigo.addKeyListener(c);
     }
 }

@@ -105,6 +105,15 @@ public class ControladorEstudiantes implements ActionListener, KeyListener {
                 e = (Estudiante) it.next();
                 ar.add(e);
             }
+
+            for (int i = 0; i < ar.size(); i++) {
+                if (ar.get(i).getCod() == Integer.parseInt(v.txtCodigo.getText())) {
+                    output.writeObject(ar);
+                    output.close();
+                    JOptionPane.showMessageDialog(null, "El codigo ya existe");
+                    return false;                    
+                }
+            }
             e = new Estudiante();
             e.setCod(Integer.parseInt(v.txtCodigo.getText()));
             e.setNombre(v.txtNombre.getText());
